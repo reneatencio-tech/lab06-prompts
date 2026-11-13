@@ -146,4 +146,176 @@ mediante una simulación práctica en Java.
 
 ## Ejercicio 4: Prompt vago vs. estructurado
 
+
+### 4.1. Objetivo
+Comparar la calidad de las respuestas generadas por
+una inteligencia artificial utilizando un prompt
+vago y otro estructurado.
+
+### 4.2. Prompt vago
+
+```text
+Hazme una descripcion de un sistema de biblioteca.
+```
+
+**Resultado:** La IA generó una descripción general
+de cuatro párrafos, incluyendo el objetivo, los
+usuarios y diversas funcionalidades, pero sin una
+estructura específica.
+
+### 4.3. Prompt estructurado
+
+```text
+Actua como analista de sistemas. Redacta una
+descripcion breve de un sistema web para gestionar
+prestamos de libros en una biblioteca.
+Incluye objetivo, usuarios principales y 3
+funcionalidades clave. Utiliza un lenguaje claro
+y profesional y presenta el resultado en 3 parrafos.
+```
+
+**Resultado:** La IA presentó una descripción
+profesional de tres párrafos: objetivo, usuarios
+principales y tres funcionalidades clave.
+
+### 4.4. Comparación
+
+| Criterio | Prompt vago | Prompt estructurado |
+|---|---|---|
+| Menciona el objetivo del sistema | Sí | Sí |
+| Menciona a los usuarios principales | Sí | Sí |
+| Tiene exactamente 3 funcionalidades | No | Sí |
+| Está en 3 párrafos | No | Sí |
+| Lo usaría en un informe real | No | Sí |
+
+### 4.5. Análisis
+
+El prompt vago permitió obtener información
+general, pero no estableció criterios específicos
+de extensión, estructura ni contenido.
+
+El prompt estructurado proporcionó instrucciones
+claras sobre el rol, objetivo, contenido y formato,
+generando una respuesta más organizada y útil.
+
+### 4.6. Conclusión
+
+Se comprobó que la calidad de un prompt influye
+en la precisión y organización de las respuestas
+de una inteligencia artificial.
+
+Un prompt estructurado reduce la ambigüedad
+y permite obtener resultados más adecuados
+para una necesidad específica.
+
 ## Ejercicio 5: Anatomía de un prompt
+
+### Nivel 1: Prompt básico
+
+**Prompt utilizado:**
+
+```text
+Crea un programa en Java.
+```
+
+**Resultado obtenido:**
+
+ChatGPT no generó directamente un programa. En su lugar, solicitó que especificara qué tipo de aplicación deseaba desarrollar y presentó ejemplos como calculadora, inventario, sistema bancario y sistema de ventas.
+
+**Observación:**
+
+Comprobé que una instrucción demasiado general no garantiza una respuesta concreta. Al no definir el objetivo ni las funcionalidades del programa, la IA necesitó solicitar información adicional antes de generar el código. Esto demuestra la importancia de formular prompts claros y específicos.
+
+### Nivel 2: Prompt con rol
+
+**Prompt utilizado:**
+
+```text
+Actua como desarrollador Java. Crea un programa en Java.
+```
+
+**Resultado obtenido:**
+
+ChatGPT asumió el rol de desarrollador Java y mencionó que utilizaría buenas prácticas de programación, código limpio y programación orientada a objetos. Sin embargo, solicitó información adicional sobre el programa y presentó alternativas como Java básico, Java Swing, JavaFX y bases de datos.
+
+**Observación:**
+
+Al incorporar el rol de desarrollador Java, observé una respuesta más técnica y especializada que en el primer nivel. No obstante, la IA todavía necesitó aclaraciones porque no había definido la finalidad del programa. Comprendí que asignar un rol mejora la orientación de la respuesta, pero también es necesario proporcionar un contexto específico.
+
+### Nivel 3: Prompt con rol y contexto
+
+**Prompt utilizado:**
+
+```text
+Actua como desarrollador Java. Crea un programa en Java para gestionar los productos de una tienda.
+```
+
+**Resultado obtenido:**
+
+ChatGPT generó directamente una propuesta de sistema de gestión de productos para una tienda, utilizando programación orientada a objetos en Java.
+
+El proyecto fue organizado en tres clases: `Producto.java`, `Inventario.java` y `Main.java`.
+
+La aplicación propuesta permite registrar, listar, buscar, actualizar y eliminar productos, además de calcular el valor total del inventario. También incluye validaciones de datos, un ejemplo de ejecución y explicaciones sobre los conceptos de Java utilizados.
+
+**Observación:**
+
+Al agregar el contexto de gestionar los productos de una tienda, observé una mejora importante en la respuesta. A diferencia de los niveles anteriores, ChatGPT ya no solicitó aclaraciones y generó código relacionado directamente con el objetivo.
+
+Sin embargo, la aplicación fue planteada para ejecutarse en consola, debido a que no especifiqué el tipo de interfaz gráfica que necesitaba.
+
+**Conclusión:**
+
+Comprendí que proporcionar un contexto específico permite obtener respuestas más completas y útiles. También identifiqué que, para controlar mejor el resultado, es necesario indicar requisitos técnicos como la tecnología, las funcionalidades y el formato de entrega.
+
+### Nivel 4: Prompt estructurado
+
+**Prompt utilizado:**
+
+Se utilizó un prompt estructurado en el que se definieron el rol de desarrollador Java, el contexto del proyecto TiendaTec, el objetivo de crear una aplicación de escritorio, siete requisitos funcionales, restricciones técnicas y el formato esperado de la respuesta.
+
+**Resultado obtenido:**
+
+ChatGPT generó una propuesta de aplicación denominada TiendaTec, desarrollada en Java Swing y organizada en tres clases: `Producto.java`, `Inventario.java` y `TiendaTec.java`.
+
+La solución incluye una interfaz gráfica con campos para ingresar información, una tabla para visualizar productos y botones para registrar, buscar, actualizar, eliminar y calcular el valor total del inventario.
+
+También presentó validaciones de datos, explicaciones de las clases, instrucciones para ejecutar el programa en Visual Studio Code y ejemplos de funcionamiento.
+
+**Observación:**
+
+Observé que este nivel permitió obtener una respuesta más precisa y organizada. A diferencia del Nivel 3, donde ChatGPT propuso una aplicación de consola, en el Nivel 4 generó código para una interfaz gráfica utilizando Java Swing, tal como se había solicitado.
+
+Además, al establecer restricciones y un formato de respuesta, el contenido fue más específico y adecuado para el proyecto.
+
+**Conclusión:**
+
+Comprendí que un prompt estructurado mejora considerablemente la calidad y pertinencia de las respuestas de la inteligencia artificial. Definir el rol, contexto, objetivo, requisitos, restricciones y formato permite orientar mejor la generación del código y reducir las interpretaciones incorrectas.
+
+Sin embargo, también aprendí que el código generado debe compilarse y probarse antes de considerarlo completamente funcional.
+
+### Nivel 5: Prompt con formato
+
+**Prompt utilizado:**
+
+Actúa como desarrollador Java. Crea un programa en Java para gestionar los productos de una tienda, usando una clase Producto con los atributos código, nombre, precio y stock.
+
+Explica primero la estructura de la clase y luego presenta el código Java.
+
+**Resultado obtenido:**
+
+ChatGPT generó una respuesta organizada en cuatro secciones. Primero explicó la estructura de la clase `Producto`, identificando sus atributos, tipos de datos y métodos. Posteriormente presentó el código fuente de dos archivos: `Producto.java` y `Principal.java`.
+
+El programa propuesto permite crear productos, consultar sus datos, modificar precios y cantidades, actualizar el stock y calcular el valor del inventario.
+
+También incluyó un ejemplo de ejecución y una conclusión sobre los conceptos de programación orientada a objetos utilizados.
+
+**Análisis:**
+
+Observé que, al agregar una instrucción sobre el formato de la respuesta, ChatGPT organizó mejor la información. A diferencia de los niveles anteriores, en esta oportunidad presentó primero la explicación teórica y después el código, facilitando la comprensión del funcionamiento del programa.
+
+**Conclusión:**
+
+Comprendí que definir el formato esperado dentro de un prompt permite obtener respuestas más ordenadas y fáciles de interpretar. Esta técnica resulta útil para aprender programación porque permite comprender primero los conceptos y posteriormente analizar su aplicación en el código Java.
+
+La respuesta cumplió con el formato solicitado, aunque el código todavía requiere pruebas de compilación y ejecución para confirmar su funcionamiento.
